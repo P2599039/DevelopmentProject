@@ -7,6 +7,7 @@ body {
     flex-direction: row;
     background-color: #F34213;
     padding: 5px;
+    margin: 5px auto;
     border: solid;
     border-width: 3px;
     border-color: white;
@@ -21,6 +22,7 @@ body {
     flex-direction: row;
     background-color: #09814A;
     padding: 5px;
+    margin: 5px auto;
     box-shadow: 3px 3px 10px #000;
     border-radius: 25px;
     font-family: 'Fira Mono', Times, serif;
@@ -35,6 +37,7 @@ body {
     flex-direction: row;
     background-color: #FFA400;
     padding: 5px;
+    margin: 5px auto;
     box-shadow: 3px 3px 10px #000;
     border-radius: 25px;
     font-family: 'Fira Mono', Times, serif;
@@ -87,6 +90,7 @@ nav a:hover {
     font-size: 35px;
     font-family: 'Fira Mono', Times, serif;
     text-align: center;
+    margin: 0px auto
 }
 
 h1 {
@@ -170,6 +174,9 @@ h3 {
     border-width: 1px;
     border-color: white;
 }
+.Images{
+    width:100%;
+}
 
 .container {
     text-align: center;
@@ -193,6 +200,7 @@ h3 {
 
 a {
     color: white;
+    text-decoration: none;
 }
 
 .AboutPage {
