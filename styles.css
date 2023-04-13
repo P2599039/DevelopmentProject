@@ -119,8 +119,8 @@ h1 {
     font-family: 'Fira Mono', Times, serif;
     text-align: center;
     margin-left: auto;
-    margin-right: auto;
-    max-width: 80%;
+    margin-right: auto;   
+    max-width: 60%;
 }
 
 h3 {
@@ -220,6 +220,13 @@ a {
     border-radius: 25px;
     border-color: white;
     font-weight: bold;
+    text-align: center;
+}
+#email {
+    display: none;
+}
+#email.open{
+    display:flex;
 }
 
 #Inputs {
@@ -316,11 +323,7 @@ a {
 
     .Photos {
         max-width: 40%;
-    }
-
-    h2 {
-        max-width: 60%;
-    }
+    }  
 
     #Inputs {
         max-width: 40%;

@@ -7,3 +7,12 @@ menuToggler.addEventListener('click', ev => {
         bike.style.width = "20%";
     }
 });
+ContactInfo.addEventListener('click', ev => {
+    email.classList.toggle('open');    
+    const Contact = document.getElementById("ContactInfo");
+    if (email.classList.contains('open')) {
+        Contact.innerHTML = "Hide Contact Information";
+    } else {
+        Contact.innerHTML = "Show Contact Information";        
+    }
+});
