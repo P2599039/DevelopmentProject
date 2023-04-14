@@ -34,8 +34,6 @@ document.getElementById('routeForm').addEventListener('submit', function (event)
 function calculateRoute() {
     var start = document.getElementById('start').value;
     var destination = document.getElementById('destination').value;
-
-    // Geocode starting point and destination to get latitude and longitude
     var geocoder = new google.maps.Geocoder();
     geocoder.geocode({
         address: start
@@ -47,7 +45,6 @@ function calculateRoute() {
             }, function (results, status) {
                 if (status === 'OK') {
                     var destinationLocation = results[0].geometry.location;
-                    // Plan walking route
                     var request = {
                         origin: startLocation,
                         destination: destinationLocation,
@@ -56,7 +53,6 @@ function calculateRoute() {
                     directionsService.route(request, function (result, status) {
                         if (status === 'OK') {
                             directionsRenderer.setDirections(result);
-                            // Display directions and duration
                             var route = result.routes[0];
                             var directions = '';
                             for (var i = 0; i < route.legs.length; i++) {
