@@ -36,6 +36,8 @@ document.getElementById('routeForm').addEventListener('submit', function (event)
 function calculateRoute() {
     var start = document.getElementById('start').value;
     var destination = document.getElementById('destination').value;
+    var modeSelect = document.getElementById('mode');
+    var mode = modeSelect.options[modeSelect.selectedIndex].value;
     var geocoder = new google.maps.Geocoder();
     geocoder.geocode({
         address: start
@@ -50,7 +52,7 @@ function calculateRoute() {
                     var request = {
                         origin: startLocation,
                         destination: destinationLocation,
-                        travelMode: 'WALKING'
+                        travelMode: mode
                     };
                     directionsService.route(request, function (result, status) {
                         if (status === 'OK') {
