@@ -14,10 +14,11 @@ var directionsRenderer;
 function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
         center: {
-            lat: -34.397,
-            lng: 150.644
+            lat: 52.6369,
+            lng: 1.1398
         },
-        zoom: 14
+        zoom: 14,
+        gestureHandling: 'cooperative'
     });
     directionsService = new google.maps.DirectionsService();
     directionsRenderer = new google.maps.DirectionsRenderer({
@@ -61,9 +62,9 @@ function calculateRoute() {
                                     directions += '<p><strong>Step ' + (i + 1) +
                                         ':</strong> ' + leg.instructions + '</p>';
                                 }
-                                directions += '<p>Distance: ' + leg.distance.text +
+                                directions += '<p class="Distance">Distance: ' + leg.distance.text +
                                     '</p>';
-                                directions += '<p>Duration: ' + leg.duration.text +
+                                directions += '<p class="Distance">Duration: ' + leg.duration.text +
                                     '</p>';
                             }
                             document.getElementById('directionsPanel').innerHTML =
@@ -71,6 +72,8 @@ function calculateRoute() {
                             document.getElementById('map').style.display = 'block';
                             document.getElementById('directionsPanel').style.display =
                                 'block';
+                            document.getElementById('directionsPanel').style.backgroundColor =
+                                '#09814A';
                         } else {
                             alert('Directions request failed due to ' + status);
                         }
