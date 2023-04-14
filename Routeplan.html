@@ -8,6 +8,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@500&family=Tilt+Warp&display=swap"
         rel="stylesheet">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVOkg-mdfpPFVluWj6_-Cf82QqW8SHikk&libraries=places">
+    </script>
 </head>
 
 <body id="PlanRoutePage">
@@ -25,15 +27,24 @@
 
     <h2 id="RoutePlanText">Enter Your Starting Point and Destination In The Boxes Below </h2>
     <div id="Inputs">
-        <label for="StartingPoint">Starting Point:</label>
-        <input type="text" id="StartingPoint" name="StartingPoint" placeholder="Enter Starting Point Here" size="35">
-
-        <label for="Destination">Destination:</label>
-        <input type="text" id="Destination" name="Destination" placeholder="Enter Destination Here" size="35">
-        <button type="button" id="button1">View Routes</button>
+        <form id="routeForm">
+            <label for="start">Starting Point:</label>
+            <input type="text" id="start" required>
+            <br>
+            <label for="destination">Destination:</label>
+            <input type="text" id="destination" required>
+            <br>
+            <input type="submit" value="Plan Route">
+        </form>
     </div>
 
+    <div id="map" style="height: 600px;"></div>
+    <div id="directionsPanel"></div>
+
     <script src="scripts2.js"></script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVOkg-mdfpPFVluWj6_-Cf82QqW8SHikk&libraries=places&callback=initMap">
+    </script>
 </body>
 
 </html>
