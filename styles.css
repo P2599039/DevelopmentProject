@@ -253,7 +253,7 @@ a {
     font-weight: bold;
 }
 
-#FindRoute{
+#FindRoute {
     background-color: #383C42;
     font-family: 'Fira Mono', Times, serif;
     font-weight: bold;
@@ -265,7 +265,7 @@ a {
     margin-top: 15px;
     text-align: center;
     text-decoration: none;
-    font-size: 30px;
+    font-size: 20px;
     max-width: 50%;
     margin-left: auto;
     margin-right: auto;
@@ -279,22 +279,27 @@ a {
     margin-right: auto;
     max-width: 80%;
     border-radius: 25px;
-    border:solid;
+    border: solid;
     border-color: black;
-    border-width: 2px;   
+    border-width: 2px;
 }
-.Distance{    
-    max-width: 25%;
+
+.Distance {
+    max-width: 50%;
     font-size: 20px;
     text-align: center;
     background-color: white;
     margin-left: auto;
     margin-right: auto;
-    padding:10px;
+    padding: 10px;
     border-radius: 25px;
-    border:solid;
+    border: solid;
     border-color: black;
     border-width: 2px;
+}
+
+#directionsPanel {
+    font-family: 'Fira Mono', Times, serif;
 }
 
 @media screen and (min-width: 815px) {
@@ -356,6 +361,10 @@ a {
 
     #button1 {
         max-width: 40%;
+    }
+
+    .Distance {
+        max-width: 25%;
     }
 }
 
