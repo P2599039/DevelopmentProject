@@ -7,6 +7,7 @@ menuToggler.addEventListener('click', ev => {
         bike.style.width = "20%";
     }
 });
+
 var map;
 var directionsService;
 var directionsRenderer;
