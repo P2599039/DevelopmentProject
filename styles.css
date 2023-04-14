@@ -253,40 +253,11 @@ a {
     font-weight: bold;
 }
 
-#Destination {
-    padding: 5px;
-    margin-left: auto;
-    margin-right: auto;
+#map,
+#directionsPanel {
+    display: none;
+    margin-top: 50px;
 }
-
-#StartingPoint {
-    padding: 5px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#button1 {
-    background-color: #383C42;
-    font-family: 'Fira Mono', Times, serif;
-    font-weight: bold;
-    border: solid;
-    border-width: 3px;
-    border-radius: 25px;
-    color: white;
-    border-color: white;
-    margin-top: 15px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 30px;
-    max-width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#button1:hover {
-    background-color: #2B59C3;
-}
-
 
 @media screen and (min-width: 815px) {
     #menuToggler {
