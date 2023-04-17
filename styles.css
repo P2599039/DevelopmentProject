@@ -271,6 +271,19 @@ a {
     margin-right: auto;
 }
 
+#start {
+    padding: 10px;
+}
+
+#destination {
+    padding: 10px;
+}
+
+#mode {
+    padding: 10px;
+    font-family: 'Fira Mono', Times, serif;
+}
+
 #map,
 #directionsPanel {
     display: none;
@@ -283,7 +296,8 @@ a {
     border-color: black;
     border-width: 2px;
 }
-#map{
+
+#map {
     height: 600px;
 }
 
@@ -345,24 +359,6 @@ a {
     }
 
     #Inputs {
-        max-width: 40%;
-    }
-
-    #Destination {
-        padding-top: 10px;
-        padding-bottom: 10px;
-        padding-left: 15px;
-        padding-right: 15px;
-    }
-
-    #StartingPoint {
-        padding-top: 10px;
-        padding-bottom: 10px;
-        padding-left: 15px;
-        padding-right: 15px;
-    }
-
-    #button1 {
         max-width: 40%;
     }
 
