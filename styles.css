@@ -283,6 +283,9 @@ a {
     border-color: black;
     border-width: 2px;
 }
+#map{
+    height: 600px;
+}
 
 .Distance {
     max-width: 50%;
