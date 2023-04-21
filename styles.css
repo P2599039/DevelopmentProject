@@ -378,6 +378,9 @@ a {
     border-radius: 25px;
     margin-bottom: 25px;
 }
+#recommendation{
+    text-decoration: underline;    
+}
 
 @media screen and (min-width: 815px) {
     #menuToggler {
