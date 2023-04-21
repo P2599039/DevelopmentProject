@@ -329,35 +329,37 @@ a {
     border-radius: 25px;
     background-color: #09814A;
     color: white;
-    border-color: white;    
+    border-color: white;
     font-size: 30px;
     font-family: 'Fira Mono', Times, serif;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    max-width: 40%;
+    max-width: 90%;
 }
-#weathertext{
+
+#weathertext {
     background-color: white;
     box-shadow: 3px 3px 10px #000;
-    color:black;
-    max-width: 50%;
+    color: black;
+    max-width: 70%;
     margin-left: auto;
     margin-right: auto;
-    border:solid;
+    border: solid;
     border-width: 2px;
     border-color: black;
     border-radius: 25px;
     margin-bottom: 25px;
 }
-#weather2{
+
+#weather2 {
     background-color: white;
     box-shadow: 3px 3px 10px #000;
-    color:black;
-    max-width: 60%;
+    color: black;
+    max-width: 80%;
     margin-left: auto;
     margin-right: auto;
-    border:solid;
+    border: solid;
     border-width: 2px;
     border-color: black;
     border-radius: 25px;
@@ -409,6 +411,18 @@ a {
 
     .Distance {
         max-width: 25%;
+    }
+
+    #weather {
+        max-width: 40%;
+    }
+
+    #weathertext {
+        max-width: 50%;
+    }
+
+    #weather2 {
+        max-width: 60%;
     }
 }
 
