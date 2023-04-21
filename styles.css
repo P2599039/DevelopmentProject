@@ -365,6 +365,19 @@ a {
     border-radius: 25px;
     margin-bottom: 25px;
 }
+#weather3 {
+    background-color: white;
+    box-shadow: 3px 3px 10px #000;
+    color: black;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    border: solid;
+    border-width: 2px;
+    border-color: black;
+    border-radius: 25px;
+    margin-bottom: 25px;
+}
 
 @media screen and (min-width: 815px) {
     #menuToggler {
@@ -422,6 +435,9 @@ a {
     }
 
     #weather2 {
+        max-width: 60%;
+    }
+    #weather3{
         max-width: 60%;
     }
 }
