@@ -11,6 +11,8 @@ menuToggler.addEventListener('click', ev => {
 var map;
 var directionsService;
 var directionsRenderer;
+var startLocation;
+var destinationLocation;
 
 function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
@@ -43,12 +45,16 @@ function calculateRoute() {
         address: start
     }, function (results, status) {
         if (status === 'OK') {
-            var startLocation = results[0].geometry.location;
+            startLocation = results[0].geometry.location;
+            console.log("Start Location Lat: " + startLocation.lat());
+            console.log("Start Location Lng: " + startLocation.lng());
             geocoder.geocode({
                 address: destination
             }, function (results, status) {
                 if (status === 'OK') {
-                    var destinationLocation = results[0].geometry.location;
+                    destinationLocation = results[0].geometry.location;
+                    console.log("Destination Location Lat: " + destinationLocation.lat());
+                    console.log("Destination Location Lng: " + destinationLocation.lng());
                     var request = {
                         origin: startLocation,
                         destination: destinationLocation,
@@ -77,6 +83,7 @@ function calculateRoute() {
                                 'block';
                             document.getElementById('directionsPanel').style.backgroundColor =
                                 '#09814A';
+                            GetCoords(destinationLocation.lat(), destinationLocation.lng());
                         } else {
                             alert('Directions request failed due to ' + status);
                         }
@@ -89,4 +96,34 @@ function calculateRoute() {
             alert('Geocode was not successful for the following reason: ' + status);
         }
     });
+}
+
+function GetCoords(latitude, longitude) {
+    console.log(latitude, longitude);
+    const showweather = document.getElementById('weather');
+    showweather.style.display = "block";
+    const url = `https://weather338.p.rapidapi.com/weather/forecast?date=20230421&latitude=${latitude}&longitude=${longitude}&language=en-UK&units=m`;
+    const options = {
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': '26f11eb67fmsh6726d950fd9279ap13d840jsnee667a1ad0a4',
+            'X-RapidAPI-Host': 'weather338.p.rapidapi.com'
+        }
+    };
+
+    fetch(url, options)
+        .then(response => response.json())
+        .then(response => {
+            const currentWeather = response['v3-wx-observations-current'];
+            const temperature = currentWeather['temperature'];
+            const rain1Hour = currentWeather['precip1Hour'];
+            const rain6Hour = currentWeather['precip6Hour'];
+            const cloudcover = currentWeather['cloudCoverPhrase'];
+            const humidity = currentWeather['relativeHumidity'];
+            const feelslike = currentWeather['temperatureFeelsLike'];
+            const windspeed = currentWeather['windSpeed'];
+            const weather = document.getElementById('weather2');
+            weather.innerHTML = `Temperature: ${temperature}°C<br>Feels Like: ${feelslike}°C<br>Precipitation (Next Hour): ${rain1Hour}mm<br>Precipitation (Next 6 Hours): ${rain6Hour}mm<br>Cloud Cover: ${cloudcover}<br>Humidity: ${humidity}%<br>Wind Speed: ${windspeed} m/s`;
+        })
+        .catch(err => console.error(err));
 }
