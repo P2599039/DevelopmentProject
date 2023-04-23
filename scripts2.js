@@ -122,15 +122,16 @@ function GetCoords(latitude, longitude) {
             const humidity = currentWeather['relativeHumidity'];
             const feelslike = currentWeather['temperatureFeelsLike'];
             const windspeed = currentWeather['windSpeed'];
+            const winddir = currentWeather['windDirectionCardinal'];
             const weather = document.getElementById('weather2');            
-            weather.innerHTML = `Temperature: ${temperature}°C<br>Feels Like: ${feelslike}°C<br>Precipitation (Next Hour): ${rain1Hour}mm<br>Precipitation (Next 6 Hours): ${rain6Hour}mm<br>Cloud Cover: ${cloudcover}<br>Humidity: ${humidity}%<br>Wind Speed: ${windspeed} m/s`;
+            weather.innerHTML = `Temperature: ${temperature}°C<br>Feels Like: ${feelslike}°C<br>Precipitation (Next Hour): ${rain1Hour}mm<br>Precipitation (Next 6 Hours): ${rain6Hour}mm<br>Cloud Cover: ${cloudcover}<br>Humidity: ${humidity}%<br>Wind Speed: ${windspeed} m/s<br>Wind Direction(N,E,S,W): ${winddir}`;
             const weather3 = document.getElementById('weather3');
             if (rain1Hour > 2) {
-                weather3.innerHTML += "It is not recommended to do your route due to heavy rainfall in the next hour.";
+                weather3.innerHTML += "It is not recommended to follow your route due to heavy rainfall in the next hour.";
               } else if (temperature < 3) {
-                weather3.innerHTML += "It is not recommended to do your route due to low temperatures.";
+                weather3.innerHTML += "It is not recommended to follow your route due to low temperatures.";
               } else {
-                weather3.innerHTML += "It's a good day to do your route!";
+                weather3.innerHTML += "It's a good day to follow your route!";
               }
         })
         .catch(err => console.error(err));
