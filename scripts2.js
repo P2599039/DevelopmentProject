@@ -130,6 +130,8 @@ function GetCoords(latitude, longitude) {
                 weather3.innerHTML += "It is not recommended to follow your route due to heavy rainfall in the next hour.";
               } else if (temperature < 3) {
                 weather3.innerHTML += "It is not recommended to follow your route due to low temperatures.";
+              } else if (windspeed > 10) {
+                weather3.innerHTML += "It is not recommended to follow your route due to high wind speeds.";
               } else {
                 weather3.innerHTML += "It's a good day to follow your route!";
               }
