@@ -350,6 +350,7 @@ a {
     border-color: black;
     border-radius: 25px;
     margin-bottom: 25px;
+    padding: 15px;
 }
 
 #weather2 {
@@ -364,6 +365,7 @@ a {
     border-color: black;
     border-radius: 25px;
     margin-bottom: 25px;
+    padding: 15px;
 }
 #weather3 {
     background-color: white;
@@ -377,6 +379,7 @@ a {
     border-color: black;
     border-radius: 25px;
     margin-bottom: 25px;
+    padding: 15px;
 }
 #recommendation{
     text-decoration: underline;    
