@@ -123,18 +123,18 @@ function GetCoords(latitude, longitude) {
             const feelslike = currentWeather['temperatureFeelsLike'];
             const windspeed = currentWeather['windSpeed'];
             const winddir = currentWeather['windDirectionCardinal'];
-            const weather = document.getElementById('weather2');            
+            const weather = document.getElementById('weather2');
             weather.innerHTML = `Temperature: ${temperature}°C<br>Feels Like: ${feelslike}°C<br>Precipitation (Next Hour): ${rain1Hour}mm<br>Precipitation (Next 6 Hours): ${rain6Hour}mm<br>Cloud Cover: ${cloudcover}<br>Humidity: ${humidity}%<br>Wind Speed: ${windspeed} m/s<br>Wind Direction: ${winddir}`;
             const weather3 = document.getElementById('weather3');
             if (rain1Hour > 2) {
                 weather3.innerHTML += "It is not recommended to follow your route due to heavy rainfall in the next hour.";
-              } else if (temperature < 3) {
+            } else if (temperature < 3) {
                 weather3.innerHTML += "It is not recommended to follow your route due to low temperatures.";
-              } else if (windspeed > 10) {
+            } else if (windspeed > 10) {
                 weather3.innerHTML += "It is not recommended to follow your route due to high wind speeds.";
-              } else {
+            } else {
                 weather3.innerHTML += "It's a good day to follow your route!";
-              }
+            }
         })
         .catch(err => console.error(err));
 }
