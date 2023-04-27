@@ -384,6 +384,11 @@ a {
 #recommendation{
     text-decoration: underline;    
 }
+.warnbox-content,.adp-warnbox{
+    visibility:hidden;
+    height:0;
+    width:0;    
+    }
 
 @media screen and (min-width: 815px) {
     #menuToggler {
