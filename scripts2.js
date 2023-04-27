@@ -80,9 +80,7 @@ function calculateRoute() {
                                 directions;
                             document.getElementById('map').style.display = 'block';
                             document.getElementById('directionsPanel').style.display =
-                                'block';
-                            document.getElementById('directionsPanel').style.backgroundColor =
-                                '#09814A';
+                                'block';                            
                             GetCoords(destinationLocation.lat(), destinationLocation.lng());
                         } else {
                             alert('Directions request failed due to ' + status);
