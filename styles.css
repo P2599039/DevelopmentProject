@@ -50,22 +50,22 @@ body {
 #menu1.open {
     display: flex;
     flex-direction: column;
-    animation-name: fadein;
-	animation-duration: 0.8s;
+    animation-name: scaleup;
+    animation-duration: 1s;
 }
 
 #menu2.open {
     display: flex;
     flex-direction: column;
-    animation-name: fadein;
-	animation-duration: 0.8s;
+    animation-name: scaleup;
+    animation-duration: 1s;
 }
 
 #menu3.open {
     display: flex;
     flex-direction: column;
-    animation-name: fadein;
-	animation-duration: 0.8s;
+    animation-name: scaleup;
+    animation-duration: 1s;
 }
 
 nav a {
@@ -291,6 +291,13 @@ a {
 }
 
 #map,
+#directionsPanel,
+#weather {    
+    animation-name: scaleup;
+    animation-duration: 1s;
+}
+
+#map,
 #directionsPanel {
     display: none;
     margin-top: 50px;
@@ -400,30 +407,15 @@ a {
     height: 0;
     width: 0;
 }
-@keyframes fadein {
-	0% {
-		opacity: 0;
-	}
 
-	20% {
-		opacity: 0.2;
-	}
+@keyframes scaleup {
+    0% {
+        scale: 0;
+    }
 
-	40% {
-		opacity: 0.4;
-	}
-
-	60% {
-		opacity: 0.6;
-	}
-
-	80% {
-		opacity: 0.8;
-	}
-
-	100% {
-		opacity: 1;
-	}
+    100% {
+        scale: 1;
+    }
 }
 
 @media screen and (min-width: 815px) {
