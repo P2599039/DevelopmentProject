@@ -110,7 +110,6 @@ function GetCoords(latitude, longitude) {
             'X-RapidAPI-Host': 'weather338.p.rapidapi.com'
         }
     };
-
     fetch(url, options)
         .then(response => response.json())
         .then(response => {
