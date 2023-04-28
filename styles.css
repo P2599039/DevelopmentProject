@@ -96,7 +96,7 @@ nav a:hover {
     font-size: 35px;
     font-family: 'Fira Mono', Times, serif;
     text-align: center;
-    margin: 0px auto
+    margin: 0px auto;
 }
 
 h1 {
@@ -145,6 +145,8 @@ h3 {
 
 #menuToggler {
     padding: auto;
+    animation-name: scaleup;
+    animation-duration: 1s;
 }
 
 #LittleBike {
@@ -171,6 +173,8 @@ h3 {
     max-width: 100%;
     height: auto;
     background-color: white;
+    animation-name: scaleup;
+    animation-duration: 0.5s;
 }
 
 .Photos:hover {
@@ -292,7 +296,7 @@ a {
 
 #map,
 #directionsPanel,
-#weather {    
+#weather {
     animation-name: scaleup;
     animation-duration: 1s;
 }
