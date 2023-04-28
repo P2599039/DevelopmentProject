@@ -123,7 +123,7 @@ function GetCoords(latitude, longitude) {
             const windspeed = currentWeather['windSpeed'];
             const winddir = currentWeather['windDirectionCardinal'];
             const weather = document.getElementById('weather2');
-            weather.innerHTML = `Temperature: ${temperature}°C<br>Feels Like: ${feelslike}°C<br>Precipitation (Next Hour): ${rain1Hour}mm<br>Precipitation (Next 6 Hours): ${rain6Hour}mm<br>Cloud Cover: ${cloudcover}<br>Humidity: ${humidity}%<br>Wind Speed: ${windspeed} m/s<br>Wind Direction: ${winddir}`;
+            weather.innerHTML = `Temperature: ${temperature}°C<br><br>Feels Like: ${feelslike}°C<br><br>Precipitation (Next Hour): ${rain1Hour}mm<br><br>Precipitation (Next 6 Hours): ${rain6Hour}mm<br><br>Cloud Cover: ${cloudcover}<br><br>Humidity: ${humidity}%<br><br>Wind Speed: ${windspeed} m/s<br><br>Wind Direction: ${winddir}`;
             const weather3 = document.getElementById('weather3');
             if (rain1Hour > 2) {
                 weather3.innerHTML += "It is not recommended to follow your route due to heavy rainfall in the next hour.";
