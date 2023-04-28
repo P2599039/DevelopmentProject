@@ -153,9 +153,9 @@ function GetCoords2(latitude, longitude, latitude2, longitude2) {
             const elevationdifference = elevation2 - elevation1;
             const elevationdifference2 = document.getElementById('elevation');
             if (elevationdifference >= 0) {
-                elevationdifference2.innerHTML = `Elevation Gain: ${elevationdifference.toFixed(2)} meters`;
+                elevationdifference2.innerHTML = `Altitude Gain: ${elevationdifference.toFixed(2)} meters`;
             } else {
-                elevationdifference2.innerHTML = `Elevation Loss: ${Math.abs(elevationdifference).toFixed(2)} meters`;
+                elevationdifference2.innerHTML = `Altitude Loss: ${Math.abs(elevationdifference).toFixed(2)} meters`;
             }
         } else {
             console.error('Elevation service failed due to: ' + status);
