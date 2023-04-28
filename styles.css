@@ -50,16 +50,22 @@ body {
 #menu1.open {
     display: flex;
     flex-direction: column;
+    animation-name: fadein;
+	animation-duration: 0.8s;
 }
 
 #menu2.open {
     display: flex;
     flex-direction: column;
+    animation-name: fadein;
+	animation-duration: 0.8s;
 }
 
 #menu3.open {
     display: flex;
     flex-direction: column;
+    animation-name: fadein;
+	animation-duration: 0.8s;
 }
 
 nav a {
@@ -393,6 +399,31 @@ a {
     visibility: hidden;
     height: 0;
     width: 0;
+}
+@keyframes fadein {
+	0% {
+		opacity: 0;
+	}
+
+	20% {
+		opacity: 0.2;
+	}
+
+	40% {
+		opacity: 0.4;
+	}
+
+	60% {
+		opacity: 0.6;
+	}
+
+	80% {
+		opacity: 0.8;
+	}
+
+	100% {
+		opacity: 1;
+	}
 }
 
 @media screen and (min-width: 815px) {
