@@ -75,13 +75,15 @@ function calculateRoute() {
                                     '</p>';
                                 directions += '<p class="Distance">Duration: ' + leg.duration.text +
                                     '</p>';
+                                directions += '<p class="Distance" id="elevation" ></p>';
                             }
                             document.getElementById('directionsPanel').innerHTML =
                                 directions;
                             document.getElementById('map').style.display = 'block';
                             document.getElementById('directionsPanel').style.display =
-                                'block';                            
+                                'block';
                             GetCoords(destinationLocation.lat(), destinationLocation.lng());
+                            GetCoords2(startLocation.lat(), startLocation.lng(), destinationLocation.lat(), destinationLocation.lng());
                         } else {
                             alert('Directions request failed due to ' + status);
                         }
@@ -135,4 +137,29 @@ function GetCoords(latitude, longitude) {
             }
         })
         .catch(err => console.error(err));
+}
+
+function GetCoords2(latitude, longitude, latitude2, longitude2) {
+    const elevation = new google.maps.ElevationService();
+    const locations = [
+        new google.maps.LatLng(latitude, longitude),
+        new google.maps.LatLng(latitude2, longitude2),
+    ];
+    elevation.getElevationForLocations({
+        locations
+    }, function (results, status) {
+        if (status === 'OK') {
+            const elevation1 = results[0].elevation;
+            const elevation2 = results[1].elevation;
+            const elevationdifference = elevation2 - elevation1;
+            const elevationdifference2 = document.getElementById('elevation');
+            if (elevationdifference >= 0) {
+                elevationdifference2.innerHTML = `Elevation Gain: ${elevationdifference.toFixed(2)} meters`;
+            } else {
+                elevationdifference2.innerHTML = `Elevation Loss: ${Math.abs(elevationdifference).toFixed(2)} meters`;
+            }
+        } else {
+            console.error('Elevation service failed due to: ' + status);
+        }
+    });
 }
