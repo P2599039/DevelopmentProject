@@ -99,8 +99,7 @@ function calculateRoute() {
     });
 }
 
-function GetCoords(latitude, longitude) {
-    console.log(latitude, longitude);
+function GetCoords(latitude, longitude) {    
     const showweather = document.getElementById('weather');
     showweather.style.display = "block";
     const url = `https://weather338.p.rapidapi.com/weather/forecast?date=20230421&latitude=${latitude}&longitude=${longitude}&language=en-UK&units=m`;
