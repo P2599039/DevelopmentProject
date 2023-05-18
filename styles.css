@@ -462,13 +462,17 @@ a {
     #Inputs {
         max-width: 40%;
     }
+    #map,
+#directionsPanel {
+    max-width: 60%;
+}
 
     .Distance {
         max-width: 25%;
     }
 
     #weather {
-        max-width: 80%;
+        max-width: 60%;
     }
 
     #weathertext {
