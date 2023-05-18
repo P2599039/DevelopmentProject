@@ -71,6 +71,7 @@ function calculateRoute() {
                                     directions += '<p><strong>Step ' + (i + 1) +
                                         ':</strong> ' + leg.instructions + '</p>';
                                 }
+                                directions += '<p class="Distance">Click on a Direction to interact with it on the map.</p>';
                                 directions += '<p class="Distance">Distance: ' + leg.distance.text +
                                     '</p>';
                                 directions += '<p class="Distance">Duration: ' + leg.duration.text +
